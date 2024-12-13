@@ -22,7 +22,7 @@ public class ReizigerDAOPsql implements ReizigerDAO {
 
 
     @Override
-    public boolean save(Reiziger reiziger) throws SQLException {
+    public boolean save(Reiziger reiziger) {
         try{
             String query = "INSERT INTO Reiziger (reiziger_id, voorletters, tussenvoegsel, achternaam, geboortedatum) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = con.prepareStatement(query);
@@ -38,9 +38,10 @@ public class ReizigerDAOPsql implements ReizigerDAO {
             }
 
             return true;
-        } catch (Exception e) {
-            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return false;
     }
 
     @Override
@@ -60,9 +61,10 @@ public class ReizigerDAOPsql implements ReizigerDAO {
             }
 
             return true;
-        } catch (Exception e) {
-            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return false;
     }
 
     @Override
@@ -73,9 +75,10 @@ public class ReizigerDAOPsql implements ReizigerDAO {
             preparedStatement.setInt(1, reiziger.getId());
             preparedStatement.executeUpdate();
             return true;
-        } catch (Exception e) {
-            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return false;
     }
 
     @Override

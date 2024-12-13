@@ -33,8 +33,9 @@ public class AdresDAOPsql implements AdresDAO {
 
             return true;
         } catch (SQLException e) {
-            return false;
+            e.printStackTrace();
         }
+        return false;
     }
 
     @Override
@@ -51,8 +52,9 @@ public class AdresDAOPsql implements AdresDAO {
             preparedStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
-            return false;
+            e.printStackTrace();
         }
+        return false;
     }
 
     @Override
@@ -64,8 +66,9 @@ public class AdresDAOPsql implements AdresDAO {
             preparedStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
-            return false;
+            e.printStackTrace();
         }
+        return false;
     }
 
     @Override
