@@ -7,11 +7,10 @@ import java.util.List;
 import java.util.Date;
 
 public interface ReizigerDAO {
-    boolean save(Reiziger reiziger) throws SQLException;
-    boolean update(Reiziger reiziger);
-    boolean delete(Reiziger reiziger);
+    void save(Reiziger reiziger) throws SQLException;
+    void update(Reiziger reiziger);
+    void delete(Reiziger reiziger);
     Reiziger findById(int id);
-    List<Reiziger> findByGbdatum(Date geboortedatum);
     List<Reiziger> findAll();
 }
 

@@ -1,12 +1,15 @@
 package ovchip.domain;
 
 public class Adres {
+
     private int id;
     private String postcode;
     private String huisnummer;
     private String straat;
     private String woonplaats;
     private Reiziger reiziger;
+
+    public Adres() {}
 
     public Adres(int id, String postcode, String huisnummer, String straat, String woonplaats) {
         this.id = id;

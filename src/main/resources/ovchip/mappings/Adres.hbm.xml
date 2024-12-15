@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ovchip.domain.Adres" table="adres">
+        <id name="id" column="adres_id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="postcode" column="postcode"/>
+        <property name="huisnummer" column="huisnummer"/>
+        <property name="straat" column="straat"/>
+        <property name="woonplaats" column="woonplaats"/>
+
+        <one-to-one name="reiziger" class="ovchip.domain.Reiziger" foreign-key="reiziger_id"/>
+    </class>
+</hibernate-mapping>
