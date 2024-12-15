@@ -3,15 +3,12 @@ package ovchip.domain;
 import java.util.Date;
 
 public class Reiziger {
-
     private int id;
     private String voorletters;
     private String tussenvoegsel;
     private String achternaam;
     private Date geboortedatum;
     private Adres adres;
-
-    public Reiziger() {}
 
     public Reiziger(int id, String voorletters, String tussenvoegsel, String achternaam, Date geboortedatum) {
         this.id = id;
